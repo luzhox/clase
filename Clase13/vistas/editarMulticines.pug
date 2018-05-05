@@ -1,0 +1,8 @@
+extends base
+include mixins/_formulario
+block contenido 
+    div.container
+        div.row
+            div.card.col.s8.push-s2
+                div.card-content
+                    +formulario(titulo, registro)    

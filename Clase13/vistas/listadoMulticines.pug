@@ -1,0 +1,27 @@
+extends base
+
+block contenido 
+    
+    div.container
+        div.row
+            h1.title.center Cines
+            div.card.col.s10.push-s1
+                div.card-content
+                    table
+                        thead
+                            tr  
+                                th ID
+                                th Nombre
+                                th Descripción
+                                th Caracteristicas
+                                th Acción
+                        tbody
+                            each registro in registros
+                                tr
+                                    td 
+                                        a(href=`/multicines/formEditar/${registro._id}`) #{registro._id}
+                                    td #{registro.nombre}
+                                    td #{registro.descripcion}
+                                    td #{registro.caracteristicas.join(" - ")}
+                                    td
+                                        a.btn.red(href=`/multicines/eliminar/${registro._id}`) Eliminar

@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Home
+        link(rel="stylesheet", href="/js/vendors/materialize/css/materialize.min.css")
+        script(src="/js/vendors/materialize/js/materialize.min.js")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+
+    body
+        nav
+            div.nav-wrapper
+                a.brand-logo Logo
+                    ul#nav-mobile.right.hide-on-med-and-down
+                        li
+                            a(href="/multicines") Multicines
+                        li
+                            a(href="/multicines/formInsertar") Agregar
+        block contenido
